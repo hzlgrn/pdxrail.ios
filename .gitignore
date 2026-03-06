@@ -62,4 +62,4 @@ playground.xcworkspace
 .env
 .vscode/
 *.code-snippets
-*/data/Config.swift
+PDXRail/data/Config.swift
