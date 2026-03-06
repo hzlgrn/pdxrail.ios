@@ -53,8 +53,6 @@ struct HelpView: View {
     }
 }
 
-// MARK: - Help row
-
 private struct HelpRow: View {
     let icon:  String
     let tint:  Color

@@ -3,43 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		000000000000000000000C01 /* PDXRailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B01 /* PDXRailApp.swift */; };
-		000000000000000000000C02 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B02 /* Config.swift */; };
-		000000000000000000000C03 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B03 /* Domain.swift */; };
-		000000000000000000000C04 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B04 /* Models.swift */; };
-		000000000000000000000C05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B05 /* Network.swift */; };
-		000000000000000000000C06 /* InitDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B06 /* InitDataLoader.swift */; };
-		000000000000000000000C07 /* PdxRailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B07 /* PdxRailViewModel.swift */; };
-		000000000000000000000C08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B08 /* ContentView.swift */; };
-		000000000000000000000C09 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B09 /* MapView.swift */; };
-		000000000000000000000C0A /* ArrivalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B0A /* ArrivalsView.swift */; };
-		000000000000000000000C0B /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B0B /* HelpView.swift */; };
 		000000000000000000000C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B0C /* Assets.xcassets */; };
-		000000000000000000000C0D /* init_data_rail_stops.json in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B0D /* init_data_rail_stops.json */; };
-		000000000000000000000C0E /* init_data_rail_lines.json in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000B0E /* init_data_rail_lines.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000000000000000000000B01 /* PDXRailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDXRailApp.swift; sourceTree = "<group>"; };
-		000000000000000000000B02 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		000000000000000000000B03 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
-		000000000000000000000B04 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		000000000000000000000B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		000000000000000000000B06 /* InitDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitDataLoader.swift; sourceTree = "<group>"; };
-		000000000000000000000B07 /* PdxRailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdxRailViewModel.swift; sourceTree = "<group>"; };
-		000000000000000000000B08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		000000000000000000000B09 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		000000000000000000000B0A /* ArrivalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalsView.swift; sourceTree = "<group>"; };
-		000000000000000000000B0B /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		000000000000000000000B0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		000000000000000000000B0D /* init_data_rail_stops.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = init_data_rail_stops.json; sourceTree = "<group>"; };
-		000000000000000000000B0E /* init_data_rail_lines.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = init_data_rail_lines.json; sourceTree = "<group>"; };
 		000000000000000000000B0F /* PDXRail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDXRail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9A1E3A402F5A8A81002AF1F1 /* model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = model; sourceTree = "<group>"; };
+		9A1E3A4C2F5A8E55002AF1F1 /* view */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = view; sourceTree = "<group>"; };
+		9A1E3A4D2F5A8FAE002AF1F1 /* data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = data; sourceTree = "<group>"; };
+		9A1E3A532F5A900B002AF1F1 /* viewmodel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = viewmodel; sourceTree = "<group>"; };
+		9A1E3A552F5A9064002AF1F1 /* res */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = res; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		000000000000000000000D05 /* Frameworks */ = {
@@ -71,20 +55,13 @@
 		000000000000000000000A03 /* PDXRail */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000B02 /* Config.swift */,
+				9A1E3A4D2F5A8FAE002AF1F1 /* data */,
+				9A1E3A402F5A8A81002AF1F1 /* model */,
+				9A1E3A4C2F5A8E55002AF1F1 /* view */,
+				9A1E3A532F5A900B002AF1F1 /* viewmodel */,
+				9A1E3A552F5A9064002AF1F1 /* res */,
 				000000000000000000000B01 /* PDXRailApp.swift */,
-				000000000000000000000B03 /* Domain.swift */,
-				000000000000000000000B04 /* Models.swift */,
-				000000000000000000000B05 /* Network.swift */,
-				000000000000000000000B06 /* InitDataLoader.swift */,
-				000000000000000000000B07 /* PdxRailViewModel.swift */,
-				000000000000000000000B08 /* ContentView.swift */,
-				000000000000000000000B09 /* MapView.swift */,
-				000000000000000000000B0A /* ArrivalsView.swift */,
-				000000000000000000000B0B /* HelpView.swift */,
 				000000000000000000000B0C /* Assets.xcassets */,
-				000000000000000000000B0D /* init_data_rail_stops.json */,
-				000000000000000000000B0E /* init_data_rail_lines.json */,
 			);
 			path = PDXRail;
 			sourceTree = "<group>";
@@ -103,6 +80,13 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9A1E3A402F5A8A81002AF1F1 /* model */,
+				9A1E3A4C2F5A8E55002AF1F1 /* view */,
+				9A1E3A4D2F5A8FAE002AF1F1 /* data */,
+				9A1E3A532F5A900B002AF1F1 /* viewmodel */,
+				9A1E3A552F5A9064002AF1F1 /* res */,
 			);
 			name = PDXRail;
 			productName = PDXRail;
@@ -148,8 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				000000000000000000000C0C /* Assets.xcassets in Resources */,
-				000000000000000000000C0D /* init_data_rail_stops.json in Resources */,
-				000000000000000000000C0E /* init_data_rail_lines.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,16 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				000000000000000000000C01 /* PDXRailApp.swift in Sources */,
-				000000000000000000000C02 /* Config.swift in Sources */,
-				000000000000000000000C03 /* Domain.swift in Sources */,
-				000000000000000000000C04 /* Models.swift in Sources */,
-				000000000000000000000C05 /* Network.swift in Sources */,
-				000000000000000000000C06 /* InitDataLoader.swift in Sources */,
-				000000000000000000000C07 /* PdxRailViewModel.swift in Sources */,
-				000000000000000000000C08 /* ContentView.swift in Sources */,
-				000000000000000000000C09 /* MapView.swift in Sources */,
-				000000000000000000000C0A /* ArrivalsView.swift in Sources */,
-				000000000000000000000C0B /* HelpView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
