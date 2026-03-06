@@ -5,7 +5,6 @@ import MapKit
 @MainActor
 final class PdxRailViewModel {
     
-
     // Map content
     var stops: [RailStop] = []
     var lines: [PolylineStroke] = []
@@ -43,7 +42,6 @@ final class PdxRailViewModel {
     private var arrivalsTask: Task<Void, Never>?
 
     // Initial data load
-
     func loadInitialData() async {
         let loadedStops = await Task.detached(priority: .userInitiated) {
             try? InitDataLoader.loadStops()
@@ -165,23 +163,29 @@ final class PdxRailViewModel {
             guard let self else { return }
             do {
                 while !Task.isCancelled {
-                    let locIds = try await resolveLocIds(for: stop)
-                    guard !Task.isCancelled else { return }
-
-                    let response = try await service.fetchArrivals(
-                        locIds: locIds,
-                        isStreetcar: stop.isStreetcar
-                    )
-                    guard !Task.isCancelled else { return }
-
-                    let arrivals = Self.parseArrivalItems(from: response, stop: stop)
-                    arrivalsState  = .loaded(arrivals)
-                    vehicleMarkers = arrivals.compactMap(\.vehicle)
-
+                    do {
+                        
+                        let locIds = try await resolveLocIds(for: stop)
+                        guard !Task.isCancelled else { return }
+                        
+                        let response = try await service.fetchArrivals(
+                            locIds: locIds,
+                            isStreetcar: stop.isStreetcar
+                        )
+                        guard !Task.isCancelled else { return }
+                        
+                        let arrivals = Self.parseArrivalItems(from: response, stop: stop)
+                        arrivalsState  = .loaded(arrivals)
+                        vehicleMarkers = arrivals.compactMap(\.vehicle)
+                        guard !Task.isCancelled else { return }
+                        
+                    } catch {
+                        arrivalsState = .failed(error)
+                    }
                     try await Task.sleep(for: .seconds(10))
                 }
             } catch is CancellationError {
-                // Normal dismissal — no-op
+                // Normal dismissal - no-op
             } catch {
                 arrivalsState = .failed(error)
             }
@@ -265,14 +269,14 @@ final class PdxRailViewModel {
     
     static func lineColor(for shortSign: String) -> Color {
         let s = shortSign.lowercased()
-        if s.contains("blue")                              { return Color(red: 0.0, green: 0.412, blue: 0.667) }
-        if s.contains("green")                             { return Color(red: 0.0, green: 0.529, blue: 0.322) }
-        if s.contains("orange")                            { return Color(red: 0.82, green: 0.373, blue: 0.153) }
-        if s.contains("red")                               { return Color(red: 0.82, green: 0.071, blue: 0.259) }
-        if s.contains("yellow")                            { return Color(red: 1.0, green: 0.769, blue: 0.145) }
-        if s.contains("ns line")                           { return Color(red: 0.549, green: 0.776, blue: 0.243) }
-        if s.contains("a loop") || s.contains("loop a")   { return Color(red: 0.867, green: 0.157, blue: 0.557) }
-        if s.contains("b loop") || s.contains("loop b")   { return Color(red: 0.0, green: 0.569, blue: 0.698) }
+        if s.contains("blue") { return Color(red: 0.0, green: 0.412, blue: 0.667) }
+        if s.contains("green") { return Color(red: 0.0, green: 0.529, blue: 0.322) }
+        if s.contains("orange") { return Color(red: 0.82, green: 0.373, blue: 0.153) }
+        if s.contains("red") { return Color(red: 0.82, green: 0.071, blue: 0.259) }
+        if s.contains("yellow") { return Color(red: 1.0, green: 0.769, blue: 0.145) }
+        if s.contains("ns line") { return Color(red: 0.549, green: 0.776, blue: 0.243) }
+        if s.contains("a loop") || s.contains("loop a") { return Color(red: 0.867, green: 0.157, blue: 0.557) }
+        if s.contains("b loop") || s.contains("loop b") { return Color(red: 0.0, green: 0.569, blue: 0.698) }
         return .gray
     }
 }

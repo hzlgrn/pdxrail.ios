@@ -28,7 +28,7 @@ struct MapView: View {
 
             // Active vehicle positions (shown while viewing arrivals)
             ForEach(viewModel.vehicleMarkers) { vehicle in
-                Annotation(vehicle.shortSign, coordinate: vehicle.coordinate, anchor: .center) {
+                Annotation("", coordinate: vehicle.coordinate, anchor: .center) {
                     VehicleMarkerView(vehicle: vehicle)
                 }
             }

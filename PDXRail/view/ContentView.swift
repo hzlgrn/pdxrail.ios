@@ -68,8 +68,6 @@ struct ContentView: View {
     }
 }
 
-// MARK: - App icon circle
-
 private struct AppIconCircle: View {
     private static let appIcon: UIImage? = {
         if let icons = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String: Any],
@@ -105,8 +103,6 @@ private struct AppIconCircle: View {
         .clipShape(Circle())
     }
 }
-
-// MARK: - Map type picker
 
 private struct MapTypeMenu: View {
     @Environment(PdxRailViewModel.self) private var viewModel

@@ -1,27 +1,6 @@
 import CoreLocation
 import SwiftUI
 
-struct RailStop: Codable, Identifiable, Hashable {
-    let uniqueid: String
-    let station:  String?
-    let line:     String?
-    let type:     String    // "MAX", "CR", "SC"
-    let lat:      Double
-    let lon:      Double
-
-    var id: String { uniqueid }
-
-    var coordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: lat, longitude: lon)
-    }
-
-    var isMAX:       Bool { type == Domain.RailSystem.stopMAX }
-    var isStreetcar: Bool { type == Domain.RailSystem.stopStreetcar }
-    var isCommuter:  Bool { type == Domain.RailSystem.stopCommuter }
-
-    var markerSystemImage: String { isStreetcar ? "StreetcarMarkerStop.png" : "RailSystemMarkerStop.png" }
-}
-
 struct PolylinePoint: Codable {
     let a: Double   // latitude
     let o: Double   // longitude
@@ -36,6 +15,7 @@ struct RailLine: Codable, Identifiable {
     var id: String { UUID().uuidString }
 }
 
+// PolylineStroke:RailLine, are created by evaluating a RailLine.
 struct PolylineStroke: Codable, Identifiable {
     let red: Double
     let green: Double

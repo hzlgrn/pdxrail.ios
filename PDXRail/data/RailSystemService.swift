@@ -3,64 +3,6 @@ import OSLog
 
 let logger = Logger(subsystem: "com.pdxrail.ios", category: "Network")
 
-// MARK: - API Response Models
-
-struct StopsResponse: Codable {
-    let resultSet: ResultSet
-
-    struct ResultSet: Codable {
-        let location: [Location]?
-    }
-
-    struct Location: Codable {
-        let locid: Int
-        let desc:  String?
-        let lat:   Double
-        let lng:   Double
-        let dir:   String?
-    }
-}
-
-struct ArrivalsResponse: Codable {
-    let resultSet: ResultSet
-
-    struct ResultSet: Codable {
-        let arrival:  [Arrival]?
-        let location: [Location]
-    }
-
-    struct Arrival: Codable {
-        let id:            String
-        let scheduled:     Int64
-        let estimated:     Int64?
-        let shortSign:     String?
-        let fullSign:      String
-        let dir:           Int
-        let locid:         Int
-        let status:        String
-        let blockPosition: BlockPosition?
-        let detoured:      Bool
-        let departed:      Bool?
-    }
-
-    struct BlockPosition: Codable {
-        let lat:         Double
-        let lng:         Double
-        let heading:     Int
-        let routeNumber: Int
-        let signMessage: String?
-    }
-
-    struct Location: Codable {
-        let locid: Int?
-        let desc:  String?
-        let lat:   Double
-        let lng:   Double
-    }
-}
-
-// MARK: - Service
-
 struct RailSystemService {
     private let baseURL: URL
     private let apiKey:  String
