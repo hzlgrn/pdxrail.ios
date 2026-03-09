@@ -76,7 +76,7 @@ private struct StopCalloutView: View {
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
-            .background(.white)
+            .background(.background)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
 
