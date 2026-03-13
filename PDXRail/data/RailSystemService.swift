@@ -7,8 +7,8 @@ struct RailSystemService {
     private let baseURL: URL
     private let apiKey:  String
 
-    init(baseURL: URL = URL(string: Config.apiBaseURL) ?? { fatalError("Invalid or missing RAIL_SYSTEM_URL in Config.xcconfig") }(),
-         apiKey:  String = Config.apiKey) {
+    init(baseURL: URL = URL(string: Config.railSystemUrl) ?? { fatalError("Invalid or missing RAIL_SYSTEM_URL in Config.xcconfig") }(),
+         apiKey:  String = Config.railSystemKey) {
         self.baseURL = baseURL
         self.apiKey  = apiKey
     }
