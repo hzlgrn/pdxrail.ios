@@ -36,7 +36,7 @@ struct ContentView: View {
             }
             .padding(.horizontal, 16)
             .frame(height: 44)
-            .background(.white)
+            .background(.background)
             .shadow(color: .black.opacity(0.12), radius: 4, y: 2)
 
             MapView()

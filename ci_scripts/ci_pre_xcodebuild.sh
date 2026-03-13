@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+cat > "$CI_PRIMARY_REPOSITORY_PATH/Config.xcconfig" <<EOF
+RAIL_SYSTEM_URL = $RAIL_SYSTEM_URL
+RAIL_SYSTEM_KEY = $RAIL_SYSTEM_KEY
+EOF
