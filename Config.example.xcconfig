@@ -1,2 +1,2 @@
-RAIL_SYSTEM_URL = https://pdxrail.hzlgrn.com
+RAIL_SYSTEM_URL = https:/$()/pdxrail.hzlgrn.com
 RAIL_SYSTEM_KEY = 0000000000000000000000000
